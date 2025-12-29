@@ -1,7 +1,11 @@
 extends Area2D
 
-@export var telaSeguinte = ""
+class_name Teleporte
+@export var spawn_direction: String #spawn_direction
+@export var tagTeleporte: String #destination_door_tag
+@export var telaSeguinte: String #destination_level_tag
+@onready var spawn = $spawn
 
 func _on_body_entered(body) -> void:
 	if body.is_in_group("player"):
-		get_tree().change_scene_to_file(telaSeguinte)
+		NavigationManager.go_to_level(telaSeguinte, tagTeleporte)
