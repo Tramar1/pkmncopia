@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://lwr3ftee514b"
-path="res://.godot/imported/evil asa mitaka.png-562d88ee376ca824869844c7c206d612.ctex"
+uid="uid://w2tod6apa4ma"
+path="res://.godot/imported/parede.png-751931742f626f9e7f7569d5ba9b41f8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://evil asa mitaka.png"
-dest_files=["res://.godot/imported/evil asa mitaka.png-562d88ee376ca824869844c7c206d612.ctex"]
+source_file="res://placeholders_sprites/parede.png"
+dest_files=["res://.godot/imported/parede.png-751931742f626f9e7f7569d5ba9b41f8.ctex"]
 
 [params]
 

@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://kq3tky1xend2"]
+
+[ext_resource type="Script" uid="uid://d0feap4cl4mdh" path="res://overworld/personagens/player.gd" id="1_0qsxf"]
+[ext_resource type="Texture2D" uid="uid://cerlgvyijyp2" path="res://placeholders_sprites/player.png" id="2_hj5mu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
+size = Vector2(32, 32)
+
+[node name="player" type="CharacterBody2D"]
+script = ExtResource("1_0qsxf")
+
+[node name="sprite_player" type="Sprite2D" parent="."]
+texture = ExtResource("2_hj5mu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hqtel")
+
+[node name="ray_baixo" type="RayCast2D" parent="."]
+target_position = Vector2(0, 32)
+
+[node name="ray_cima" type="RayCast2D" parent="."]
+target_position = Vector2(0, -32)
+
+[node name="ray_esquerda" type="RayCast2D" parent="."]
+target_position = Vector2(-32, 0)
+
+[node name="ray_direita" type="RayCast2D" parent="."]
+target_position = Vector2(32, 0)

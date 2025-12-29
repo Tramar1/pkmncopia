@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxu8nwmcf1fjp"
-path="res://.godot/imported/asa mitaka comum.jpeg-76d05fc86b503f4f89e592223c031a14.ctex"
+uid="uid://o5n358ru4dov"
+path="res://.godot/imported/chao.png-0f7586a183e25b4b315109c37b0ecf9a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asa mitaka comum.jpeg"
-dest_files=["res://.godot/imported/asa mitaka comum.jpeg-76d05fc86b503f4f89e592223c031a14.ctex"]
+source_file="res://placeholders_sprites/chao.png"
+dest_files=["res://.godot/imported/chao.png-0f7586a183e25b4b315109c37b0ecf9a.ctex"]
 
 [params]
 
