@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=3 uid="uid://i8j3sl202t3l"]
 
 [ext_resource type="Texture2D" uid="uid://w2tod6apa4ma" path="res://placeholders_sprites/parede.png" id="1_kcxvl"]
+[ext_resource type="Script" uid="uid://f0yyhbyuxffh" path="res://overworld/funcionalidades/base_scene.gd" id="1_wmrnm"]
 [ext_resource type="Texture2D" uid="uid://o5n358ru4dov" path="res://placeholders_sprites/chao.png" id="2_wmrnm"]
 [ext_resource type="Texture2D" uid="uid://b6ukdbg1lisoy" path="res://placeholders_sprites/porta.png" id="3_rh2yg"]
-[ext_resource type="PackedScene" uid="uid://kq3tky1xend2" path="res://overworld/personagens/player.tscn" id="4_1uuaa"]
-[ext_resource type="PackedScene" uid="uid://dgcnno3lttf8y" path="res://overworld/funcionalidades/teleporte.tscn" id="5_3qpq5"]
+[ext_resource type="PackedScene" uid="uid://bl3lko65f3nfi" path="res://overworld/funcionalidades/trigger_teleporte.tscn" id="6_rh2yg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_h6kia"]
 texture = ExtResource("1_kcxvl")
@@ -29,36 +29,27 @@ sources/2 = SubResource("TileSetAtlasSource_h6kia")
 sources/3 = SubResource("TileSetAtlasSource_85tq6")
 sources/4 = SubResource("TileSetAtlasSource_h3oka")
 
-[node name="casas" type="Node2D"]
+[node name="casa" type="Node2D"]
+script = ExtResource("1_wmrnm")
 
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(1, 1)
 tile_set = SubResource("TileSet_atlm5")
 format = 2
-layer_0/tile_data = PackedInt32Array(0, 2, 0, 65536, 2, 0, 131072, 2, 0, 196608, 2, 0, 262144, 2, 0, 327680, 2, 0, 393216, 2, 0, 458752, 2, 0, 524288, 2, 0, 1, 2, 0, 65537, 3, 0, 131073, 3, 0, 196609, 3, 0, 262145, 3, 0, 327681, 3, 0, 393217, 3, 0, 458753, 3, 0, 524289, 2, 0, 2, 2, 0, 65538, 3, 0, 131074, 3, 0, 196610, 3, 0, 262146, 3, 0, 327682, 3, 0, 393218, 3, 0, 458754, 3, 0, 524290, 2, 0, 3, 2, 0, 65539, 3, 0, 131075, 3, 0, 196611, 3, 0, 262147, 3, 0, 327683, 3, 0, 393219, 3, 0, 458755, 3, 0, 524291, 2, 0, 4, 2, 0, 65540, 3, 0, 131076, 3, 0, 196612, 3, 0, 262148, 3, 0, 327684, 3, 0, 393220, 3, 0, 458756, 3, 0, 524292, 2, 0, 5, 2, 0, 65541, 3, 0, 131077, 3, 0, 196613, 3, 0, 262149, 3, 0, 327685, 3, 0, 393221, 3, 0, 458757, 3, 0, 524293, 2, 0, 6, 2, 0, 65542, 3, 0, 131078, 3, 0, 196614, 3, 0, 262150, 3, 0, 327686, 3, 0, 393222, 3, 0, 458758, 3, 0, 524294, 2, 0, 7, 2, 0, 65543, 3, 0, 131079, 3, 0, 196615, 3, 0, 262151, 3, 0, 327687, 3, 0, 393223, 3, 0, 458759, 3, 0, 524295, 4, 0, 8, 2, 0, 65544, 3, 0, 131080, 3, 0, 196616, 3, 0, 262152, 3, 0, 327688, 3, 0, 393224, 3, 0, 458760, 3, 0, 524296, 2, 0, 9, 2, 0, 65545, 3, 0, 131081, 3, 0, 196617, 3, 0, 262153, 3, 0, 327689, 3, 0, 393225, 3, 0, 458761, 3, 0, 524297, 2, 0, 10, 2, 0, 65546, 3, 0, 131082, 3, 0, 196618, 3, 0, 262154, 3, 0, 327690, 3, 0, 393226, 3, 0, 458762, 3, 0, 524298, 2, 0, 11, 2, 0, 65547, 3, 0, 131083, 3, 0, 196619, 3, 0, 262155, 3, 0, 327691, 3, 0, 393227, 3, 0, 458763, 3, 0, 524299, 2, 0, 12, 2, 0, 65548, 3, 0, 131084, 3, 0, 196620, 3, 0, 262156, 3, 0, 327692, 3, 0, 393228, 3, 0, 458764, 3, 0, 524300, 2, 0, 13, 2, 0, 65549, 3, 0, 131085, 3, 0, 196621, 3, 0, 262157, 3, 0, 327693, 3, 0, 393229, 3, 0, 458765, 3, 0, 524301, 2, 0, 14, 2, 0, 65550, 2, 0, 131086, 2, 0, 196622, 2, 0, 262158, 2, 0, 327694, 2, 0, 393230, 2, 0, 458766, 2, 0, 524302, 2, 0, 524310, 2, 0, 524311, 2, 0, 524312, 2, 0, 524314, 2, 0, 524315, 2, 0, 524316, 2, 0, 458780, 2, 0, 393244, 2, 0, 327708, 2, 0, 262172, 2, 0, 262171, 2, 0, 262170, 2, 0, 262169, 2, 0, 262168, 2, 0, 262167, 2, 0, 262166, 2, 0, 327702, 2, 0, 393238, 2, 0, 458774, 2, 0, 524313, 4, 0, 327703, 3, 0, 393239, 3, 0, 458775, 3, 0, 327704, 3, 0, 393240, 3, 0, 458776, 3, 0, 327705, 3, 0, 393241, 3, 0, 458777, 3, 0, 327706, 3, 0, 393242, 3, 0, 458778, 3, 0, 327707, 3, 0, 393243, 3, 0, 458779, 3, 0)
+layer_0/tile_data = PackedInt32Array(0, 2, 0, 65536, 2, 0, 131072, 2, 0, 196608, 2, 0, 262144, 2, 0, 327680, 2, 0, 393216, 2, 0, 458752, 2, 0, 524288, 2, 0, 1, 2, 0, 65537, 3, 0, 131073, 3, 0, 196609, 3, 0, 262145, 3, 0, 327681, 3, 0, 393217, 3, 0, 458753, 3, 0, 524289, 2, 0, 2, 2, 0, 65538, 3, 0, 131074, 3, 0, 196610, 3, 0, 262146, 3, 0, 327682, 3, 0, 393218, 3, 0, 458754, 3, 0, 524290, 2, 0, 3, 2, 0, 65539, 3, 0, 131075, 3, 0, 196611, 3, 0, 262147, 3, 0, 327683, 3, 0, 393219, 3, 0, 458755, 3, 0, 524291, 2, 0, 4, 2, 0, 65540, 3, 0, 131076, 3, 0, 196612, 3, 0, 262148, 3, 0, 327684, 3, 0, 393220, 3, 0, 458756, 3, 0, 524292, 2, 0, 5, 2, 0, 65541, 3, 0, 131077, 3, 0, 196613, 3, 0, 262149, 3, 0, 327685, 3, 0, 393221, 3, 0, 458757, 3, 0, 524293, 2, 0, 6, 2, 0, 65542, 3, 0, 131078, 3, 0, 196614, 3, 0, 262150, 3, 0, 327686, 3, 0, 393222, 3, 0, 458758, 3, 0, 524294, 2, 0, 7, 2, 0, 65543, 3, 0, 131079, 3, 0, 196615, 3, 0, 262151, 3, 0, 327687, 3, 0, 393223, 3, 0, 458759, 3, 0, 524295, 4, 0, 8, 2, 0, 65544, 3, 0, 131080, 3, 0, 196616, 3, 0, 262152, 3, 0, 327688, 3, 0, 393224, 3, 0, 458760, 3, 0, 524296, 2, 0, 9, 2, 0, 65545, 3, 0, 131081, 3, 0, 196617, 3, 0, 262153, 3, 0, 327689, 3, 0, 393225, 3, 0, 458761, 3, 0, 524297, 2, 0, 10, 2, 0, 65546, 3, 0, 131082, 3, 0, 196618, 3, 0, 262154, 3, 0, 327690, 3, 0, 393226, 3, 0, 458762, 3, 0, 524298, 2, 0, 11, 2, 0, 65547, 3, 0, 131083, 3, 0, 196619, 3, 0, 262155, 3, 0, 327691, 3, 0, 393227, 3, 0, 458763, 3, 0, 524299, 2, 0, 12, 2, 0, 65548, 3, 0, 131084, 3, 0, 196620, 3, 0, 262156, 3, 0, 327692, 3, 0, 393228, 3, 0, 458764, 3, 0, 524300, 2, 0, 13, 2, 0, 65549, 3, 0, 131085, 3, 0, 196621, 3, 0, 262157, 3, 0, 327693, 3, 0, 393229, 3, 0, 458765, 3, 0, 524301, 2, 0, 14, 2, 0, 65550, 2, 0, 131086, 2, 0, 196622, 2, 0, 262158, 2, 0, 327694, 2, 0, 393230, 2, 0, 458766, 2, 0, 524302, 2, 0, 327702, 2, 0, 393238, 2, 0, 458774, 2, 0, 524310, 2, 0, 524311, 2, 0, 524313, 2, 0, 524314, 2, 0, 458778, 2, 0, 393242, 2, 0, 327706, 2, 0, 327705, 2, 0, 327703, 2, 0, 327704, 2, 0, 524312, 4, 0, 393239, 3, 0, 458775, 3, 0, 458776, 3, 0, 393241, 3, 0, 458777, 3, 0, 393240, 3, 0)
 
-[node name="portas" type="Node" parent="."]
-
-[node name="porta_casa1interior" parent="portas" instance=ExtResource("5_3qpq5")]
+[node name="casa1_interior" parent="." instance=ExtResource("6_rh2yg")]
 position = Vector2(241, 273)
-spawn_direction = "up"
-tagTeleporte = "casa1exterior"
-telaSeguinte = "teste"
+telaSeguinte = "teste_grid_movement"
 
-[node name="spawn" parent="portas/porta_casa1interior" index="1"]
-position = Vector2(0, -32)
+[node name="casa2_interior" parent="." instance=ExtResource("6_rh2yg")]
+position = Vector2(785, 273)
+telaSeguinte = "teste_grid_movement"
 
-[node name="porta_casa2interior" parent="portas" instance=ExtResource("5_3qpq5")]
-position = Vector2(817, 273)
-spawn_direction = "up"
-tagTeleporte = "casa2exterior"
-telaSeguinte = "teste"
+[node name="EntranceMarkers" type="Node2D" parent="."]
 
-[node name="spawn" parent="portas/porta_casa2interior" index="1"]
-position = Vector2(0, -32)
+[node name="casa1_interior" type="Marker2D" parent="EntranceMarkers"]
+position = Vector2(241, 241)
 
-[node name="player" parent="." instance=ExtResource("4_1uuaa")]
-position = Vector2(1095, 324)
-
-[editable path="portas/porta_casa1interior"]
-[editable path="portas/porta_casa2interior"]
+[node name="casa2_interior" type="Marker2D" parent="EntranceMarkers"]
+position = Vector2(785, 241)

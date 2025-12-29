@@ -1,28 +1,13 @@
 extends Node
 
-var spawn_teleporte_tag
-var spawn_position: Vector2
-var spawn_direction: String
-signal on_player_spawn
+class_name SceneManager
+var player: Player
+#mudar quando fizer playground real
+var scenes = "res://overworld/telas_teste/"
 
-#testes
-const scene_teste = preload("res://overworld/telas_teste/teste_grid_movement.tscn")
-const scene_casateste = preload("res://overworld/telas_teste/teste_trocar_cena.tscn")
+func change_scene(from: Player, to_scene_name:String)-> void:
+	player = from
+	player.get_parent().remove_child(player)
 
-func go_to_level(level_tag, destination_tag):
-	var scene_to_load
-	
-	match level_tag:
-		"teste":
-			scene_to_load = scene_teste
-		"casateste":
-			scene_to_load = scene_casateste
-		
-	if scene_to_load != null:
-		spawn_teleporte_tag = destination_tag
-		get_tree().change_scene_to_packed(scene_to_load)
-		
-func trigger_player_spawn(position:Vector2, direction:String):
-	spawn_position = position
-	spawn_direction = direction
-	on_player_spawn.emit(position, direction)
+	var caminho = scenes + to_scene_name + ".tscn"	
+	get_tree().change_scene_to_file(caminho)

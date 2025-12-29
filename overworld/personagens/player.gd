@@ -1,19 +1,10 @@
 extends CharacterBody2D
 
+class_name Player
 var input_dir
 var tile_size = 32
 var moving = false
 
-#pras portas funcionarem---------
-func _ready():
-	NavigationManager.on_player_spawn.connect(on_spawn)
-
-func on_spawn(position:Vector2, direction: String):
-	moving = false
-	global_position = position
-	#colcar animação depois
-#--------------------------------
-#movimentação--------------------
 func _physics_process(delta: float) -> void:
 	input_dir = Vector2.ZERO
 	if Input.is_action_pressed("BaixoQWERTY"):
@@ -42,6 +33,4 @@ func move():
 			tween.tween_callback(move_false)
 			
 func move_false():
-
 	moving = false
-#--------------------------------
