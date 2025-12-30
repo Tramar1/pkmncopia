@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://h1j5odaxjveb"]
+[gd_scene load_steps=13 format=3 uid="uid://h1j5odaxjveb"]
 
 [ext_resource type="Texture2D" uid="uid://o5n358ru4dov" path="res://placeholders_sprites/chao.png" id="1_l1cqw"]
 [ext_resource type="Texture2D" uid="uid://b6ukdbg1lisoy" path="res://placeholders_sprites/porta.png" id="2_cywwt"]
@@ -33,6 +33,12 @@ sources/0 = SubResource("TileSetAtlasSource_fmn7n")
 sources/2 = SubResource("TileSetAtlasSource_n3236")
 sources/1 = SubResource("TileSetAtlasSource_xbxx2")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l1cqw"]
+size = Vector2(30, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cywwt"]
+size = Vector2(30, 30)
+
 [node name="mundo" type="Node2D"]
 script = SubResource("GDScript_n3236")
 
@@ -49,7 +55,15 @@ position = Vector2(144, 368)
 [node name="porta1" parent="portas" instance=ExtResource("5_0ptff")]
 position = Vector2(144, 272)
 telaSeguinte = "res://overworld/telas_teste/teste_trocar_cena.tscn"
+posPlayer = Vector2(145, 241)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portas/porta1"]
+shape = SubResource("RectangleShape2D_l1cqw")
 
 [node name="porta2" parent="portas" instance=ExtResource("5_0ptff")]
 position = Vector2(336, 272)
 telaSeguinte = "res://overworld/telas_teste/teste_trocar_cena.tscn"
+posPlayer = Vector2(337, 241)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="portas/porta2"]
+shape = SubResource("RectangleShape2D_cywwt")

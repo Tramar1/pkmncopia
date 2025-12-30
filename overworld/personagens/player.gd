@@ -5,6 +5,11 @@ var input_dir
 var tile_size = 32
 var moving = false
 
+func _ready() -> void:
+	if NavigationManager.ativarPos:
+		global_position = NavigationManager.posPlayer
+		NavigationManager.ativarPos = false
+
 func _physics_process(delta: float) -> void:
 	input_dir = Vector2.ZERO
 	if Input.is_action_pressed("BaixoQWERTY"):
