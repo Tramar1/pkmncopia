@@ -38,6 +38,7 @@ size = Vector2(30, 30)
 [node name="casa" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
+texture_filter = 1
 position = Vector2(1, 1)
 tile_set = SubResource("TileSet_atlm5")
 format = 2
@@ -45,6 +46,9 @@ layer_0/tile_data = PackedInt32Array(0, 2, 0, 65536, 2, 0, 131072, 2, 0, 196608,
 
 [node name="player" parent="." instance=ExtResource("4_1uuaa")]
 position = Vector2(687, 204)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+zoom = Vector2(2.6, 2.6)
 
 [node name="portas" type="Node2D" parent="."]
 

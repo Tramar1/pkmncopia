@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://kq3tky1xend2"]
 
 [ext_resource type="Script" uid="uid://d0feap4cl4mdh" path="res://overworld/personagens/player.gd" id="1_0qsxf"]
-[ext_resource type="Texture2D" uid="uid://cerlgvyijyp2" path="res://placeholders_sprites/player.png" id="2_hj5mu"]
+[ext_resource type="Texture2D" uid="uid://c0yv8k3ha0132" path="res://placeholders_sprites/player_masc1.png" id="2_0qsxf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hqtel"]
 size = Vector2(30, 30)
@@ -12,7 +12,8 @@ collision_mask = 3
 script = ExtResource("1_0qsxf")
 
 [node name="sprite_player" type="Sprite2D" parent="."]
-texture = ExtResource("2_hj5mu")
+texture_filter = 1
+texture = ExtResource("2_0qsxf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_hqtel")
